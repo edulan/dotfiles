@@ -10,6 +10,8 @@
   tool = meld
 [pull]
   rebase = true
+[push]
+  default = current
 [rerere]
   enabled = true
 [color]
