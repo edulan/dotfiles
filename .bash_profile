@@ -1,5 +1,3 @@
-set -o vi
-
 export LC_ALL="en_US.UTF-8"
 # Set PATH
 export PATH="$HOME/bin:$PATH"
