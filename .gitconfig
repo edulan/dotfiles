@@ -25,3 +25,5 @@
 [user]
   name = Eduardo Lanchares
   email = eduardo@elanchares.com
+[core]
+  excludesfile = ~/.gitignore_global
