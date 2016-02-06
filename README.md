@@ -8,7 +8,7 @@ cd && git clone git@github.com:edulan/dotfiles.git .dotfiles
 
 Then execute the installer:
 ```
-chmod u+x .dotfiles/install.sh && ./.dotfiles/install.sh
+cd .dotfiles && chmod u+x install.sh && ./install.sh
 ```
 
 ## Bash plugins
