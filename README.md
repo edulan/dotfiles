@@ -15,5 +15,5 @@ cd .dotfiles && chmod u+x install.sh && ./install.sh
 * [fzf](https://github.com/junegunn/fzf)
 * [sexy-bash-prompt](https://github.com/twolfson/sexy-bash-prompt)
 
-## Gems
-* hookup
+## Useful gems
+* [hookup](https://rubygems.org/gems/hookup/)
