@@ -3,7 +3,7 @@
 ## Installation
 Clone this repo in your HOME dir:
 ```bash
-cd && git clone git@github.com:edulan/dotfiles.git .dotfiles
+cd && git clone --depth 1 git@github.com:edulan/dotfiles.git .dotfiles
 ```
 
 Then execute the installer:
