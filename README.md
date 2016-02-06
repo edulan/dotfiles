@@ -1,6 +1,6 @@
 # dotfiles
 
-## Instalation
+## Installation
 Clone this repo in your HOME dir:
 ```
 cd && git clone git@github.com:edulan/dotfiles.git .dotfiles
