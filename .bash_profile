@@ -1,4 +1,3 @@
-export LC_ALL="en_US.UTF-8"
 # Set PATH
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -8,8 +7,10 @@ export EDITOR="/usr/bin/vi"
 # Load fuzzy finder
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-eval "$(rbenv init -)"
+# Load autojump
 . /usr/share/autojump/autojump.sh
+
+eval "$(rbenv init -)"
 
 # Trigger ~/.bashrc commands
 . ~/.bashrc
