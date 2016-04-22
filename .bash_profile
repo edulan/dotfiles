@@ -12,5 +12,8 @@ export EDITOR="/usr/bin/vi"
 
 eval "$(rbenv init -)"
 
+# Load local gemrc
+[[ -f $HOME/.gemrc_local ]] && export GEMRC=$HOME/.gemrc_local
+
 # Trigger ~/.bashrc commands
 . ~/.bashrc
