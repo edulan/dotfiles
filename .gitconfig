@@ -12,7 +12,7 @@
   ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
   ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
   diff = diff --word-diff
-  difr = diff --word-diff=color HEAD origin/develop
+  difr = "!f() { git diff --word-diff=color HEAD `git rev-parse --abbrev-ref --symbolic-full-name @{u}`; }; f"
   recent = !git for-each-ref --sort=-committerdate --format='%(refname:short)' refs/heads/ | grep -v develop | head -n 20 
   nav = "!f() { git recent | fzf | xargs git co; }; f"
 [diff]
