@@ -1,2 +1,2 @@
 alias be='bundle exec'
-alias go='gnome-open'
+alias go='xdg-open'
