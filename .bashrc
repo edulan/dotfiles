@@ -106,15 +106,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# Run twolfson/sexy-bash-prompt
-. ~/.bash_prompt
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-# added by travis gem
-[ -f /home/edu/.travis/travis.sh ] && source /home/edu/.travis/travis.sh
-
 # Eternal bash history
 # ---------------------
 # Undocumented feature which sets the size to "unlimited".
@@ -128,3 +119,12 @@ export HISTFILE=~/.bash_eternal_history
 # Force prompt to write history after every command.
 # http://superuser.com/questions/20900/bash-history-loss
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /usr/local/share/.config/yarn/global/node_modules/tabtab/.completions/serverless.bash ] && . /usr/local/share/.config/yarn/global/node_modules/tabtab/.completions/serverless.bash
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /usr/local/share/.config/yarn/global/node_modules/tabtab/.completions/sls.bash ] && . /usr/local/share/.config/yarn/global/node_modules/tabtab/.completions/sls.bash
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
