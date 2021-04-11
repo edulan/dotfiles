@@ -11,6 +11,5 @@ ln -sfv "$DOTFILES_DIR/.bash_aliases" ~
 ln -sfv "$DOTFILES_DIR/.bash_profile" ~
 ln -sfv "$DOTFILES_DIR/.bash_prompt" ~
 ln -sfv "$DOTFILES_DIR/.bashrc" ~
-ln -sfv "$DOTFILES_DIR/.gemrc" ~
 ln -sfv "$DOTFILES_DIR/.gitconfig" ~
 ln -sfv "$DOTFILES_DIR/.gitignore_global" ~
