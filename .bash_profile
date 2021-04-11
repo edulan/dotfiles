@@ -1,9 +1,12 @@
 # Set PATH
-export PATH="$HOME/bin:$PATH"
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.yarn/bin:$PATH"
 # Set EDITOR
 export EDITOR="/usr/bin/vi"
+# FZF
+export FZF_DEFAULT_COMMAND="fd . $HOME"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd -t d . $HOME"
+export FZF_COMPLETION_TRIGGER="__"
 
 # Trigger ~/.bashrc commands
 . ~/.bashrc
@@ -17,4 +20,5 @@ export EDITOR="/usr/bin/vi"
 # Load autojump
 . /usr/share/autojump/autojump.sh
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# Docker rootless
+export DOCKER_HOST=unix:///run/user/1000/docker.sock

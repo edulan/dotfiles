@@ -128,3 +128,7 @@ PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 [ -f /usr/local/share/.config/yarn/global/node_modules/tabtab/.completions/sls.bash ] && . /usr/local/share/.config/yarn/global/node_modules/tabtab/.completions/sls.bash
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# fnm
+export PATH=/home/edu/.fnm:$PATH
+eval "`fnm env`"

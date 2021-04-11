@@ -14,9 +14,10 @@
   hisf = log --follow -p --
   diff = diff --word-diff
   difr = "!f() { git diff --word-diff=color HEAD `git rev-parse --abbrev-ref --symbolic-full-name @{u}`; }; f"
-  recent = !git for-each-ref --sort=-committerdate --format='%(refname:short)' refs/heads/ | grep -v develop | head -n 20 
-  fuznav = "!f() { git recent | fzf --prompt='Select branch to checkout' | xargs git co; }; f"
-  fuzreb = "!f() { git rebase -i $(git log --pretty=format:'%h%d %s %cn' | fzf --prompt='Select commit to rebase' | cut -d' ' -f1)^; }; f"
+  recent = !git for-each-ref --sort=-committerdate --format='%(refname:short)' refs/heads/ | grep -v develop | head -n 20
+  old = !git branch --merged | fzf -m --prompt='Select branch to remove' | xargs git br -d
+  fuznav = !git recent | fzf --prompt='Select branch to checkout' | xargs git co
+  fuzreb = "!f() { git rebase -i $(git log --pretty=format:'%h%d %s %cn' | fzf --prompt='Select commit to rebase' | cut -d' ' -f1); }; f"
   fuzshow = "!f() { git show $(git log --pretty=format:'%h%d %s %cn' | fzf --prompt='Select commit to rebase' | cut -d' ' -f1); }; f"
 [diff]
   tool = meld
